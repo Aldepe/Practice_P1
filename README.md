@@ -1,1 +1,2 @@
 # Practice_P1
+The project has already been planned so that the user must make a minimum of interactions when moving folders or files, since everything will be located in usr / bin. The only requirement is to give execution permissions to the 4 scripts: chmod -x xScript.sh. Once everything is positioned, it is recommended to open another terminal and execute the command: tail -F / var / log / messages to see the kernel messages. Run in terminal make, make install and make clear :)
