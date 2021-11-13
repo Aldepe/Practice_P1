@@ -60,35 +60,35 @@ static int __init ebbgpio_init(void){
     }
     // Going to set up the LED. It is a GPIO in output mode and will be on by default
 
-    gpio_request(gpioLED1st, "sysfs");              // gpioLED is hardcoded to 49, request it
+    gpio_request(gpioLED1st, "sysfs");              // gpioLED is hardcoded to 20, request it
     gpio_direction_output(gpioLED1st, true);        // Set the gpio to be in output mode and on
     gpio_export(gpioLED1st, false);                 // Causes gpio49 to appear in /sys/class/gpio
                                                     // the bool argument prevents the direction from being changed
-    gpio_request(gpioLED2nd, "sysfs");              // gpioLED is hardcoded to 49, request it
+    gpio_request(gpioLED2nd, "sysfs");              // gpioLED is hardcoded to 16, request it
     gpio_direction_output(gpioLED2nd, true);        // Set the gpio to be in output mode and on
     gpio_export(gpioLED2nd, false);                 // Causes gpio49 to appear in /sys/class/gpio
                                                     // the bool argument prevents the direction from being changed                  
     gpio_request(gpioButtonA, "sysfs");             // Set up the gpioButton
     gpio_direction_input(gpioButtonA);              // Set the button GPIO to be an input
-    gpio_set_debounce(gpioButtonA, 1000);            // Debounce the button with a delay of 200ms
+    gpio_set_debounce(gpioButtonA, 1000);            // Debounce the button with a delay of 1000ms
     gpio_export(gpioButtonA, false);                 // Causes gpio115 to appear in /sys/class/gpio
                                                     // the bool argument prevents the direction from being changed
                                                     // Perform a quick test to see that the button is working as expected on LKM load
     gpio_request(gpioButtonB, "sysfs");             // Set up the gpioButton
     gpio_direction_input(gpioButtonB);              // Set the button GPIO to be an input
-    gpio_set_debounce(gpioButtonB, 1000);            // Debounce the button with a delay of 200ms
+    gpio_set_debounce(gpioButtonB, 1000);            // Debounce the button with a delay of 1000ms
     gpio_export(gpioButtonB, false);                // Causes gpio115 to appear in /sys/class/gpio
                                                     // the bool argument prevents the direction from being changed
                                                     // Perform a quick test to see that the button is working as expected on LKM load
     gpio_request(gpioButtonC, "sysfs");             // Set up the gpioButton
     gpio_direction_input(gpioButtonC);              // Set the button GPIO to be an input
-    gpio_set_debounce(gpioButtonC, 1000);            // Debounce the button with a delay of 200ms
+    gpio_set_debounce(gpioButtonC, 1000);            // Debounce the button with a delay of 1000ms
     gpio_export(gpioButtonC, false);                // Causes gpio115 to appear in /sys/class/gpio
                                                     // the bool argument prevents the direction from being changed
                                                     // Perform a quick test to see that the button is working as expected on LKM load
     gpio_request(gpioButtonD, "sysfs");             // Set up the gpioButton
     gpio_direction_input(gpioButtonD);              // Set the button GPIO to be an input
-    gpio_set_debounce(gpioButtonD, 1000);            // Debounce the button with a delay of 200ms
+    gpio_set_debounce(gpioButtonD, 1000);            // Debounce the button with a delay of 1000ms
     gpio_export(gpioButtonD, false);                // Causes gpio115 to appear in /sys/class/gpio
                                                     // the bool argument prevents the direction from being changed
                                                     // Perform a quick test to see that the button is working as expected on LKM load
